@@ -1,0 +1,16 @@
+from collections import deque
+
+queue = deque()
+
+# Print jobs add karo (enqueue)
+queue.append("Document1.pdf")
+queue.append("Photo.jpg") 
+queue.append("Report.docx")
+
+print("Print Queue:", list(queue))
+
+# Print karo (dequeue - FIFO)
+print("Printing:", queue.popleft())  # Document1.pdf first
+print("Printing:", queue.popleft())  # Photo.jpg next
+
+print("Remaining:", list(queue))
